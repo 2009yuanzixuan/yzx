@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+    <head>
+        <!--外部js文件导入，以及icon的搭建-->
+        <link rel="icon" href="../icon/yzx.ico" >
+        <link rel="stylesheet"  href="../style/A_main.css">
+        <link rel="stylesheet"  href="../style/B_inmain.css">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--外部js文件导入，以及icon的搭建-->
+
+        
+        <meta charset="utf-8"> 
+        
+
+        <style>
+            p{
+                font-family: FZShuTi;
+            }
+            body{
+                background-image: url(../../static/images/bg.png);
+                text-align:center;
+            }
+            form{
+                background-size:100%;
+                background-color: rgba(235,231,191,0.4);
+                background-repeat: no-repeat;
+                height: 400px;
+            }
+            .zhuangshi-form{
+                border-color: rgba(250,250,255,0);
+                border-radius: 18px;
+                background-color: rgba(209,236,240,0.6);
+            }
+            .biggle{
+                width: 100%;
+                height: auto;
+
+            }
+            button{
+                border-color: rgba(250,250,255,0);
+                border-radius: 18px;
+                background-color: rgba(209,236,240,0.6);
+                width: 40%;
+            }
+            #snackbar {
+                visibility: hidden;
+                min-width: 250px;
+                margin-left: -125px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 2px;
+                padding: 16px;
+                position: fixed;
+                z-index: 1;
+                left: 50%;
+                bottom: 30px;
+                font-size: 17px;
+            }
+            .big{
+                display: flex;
+                margin:17px;
+                background-color:rgba(133,190,214,0.4);
+                float :left;
+            }
+            .mus{
+                /*float:left;*/
+                margin:17px;
+                background-color:rgba(235,231,191,0.4);
+                width:30%;
+            }
+            
+        </style>
+    </head>
+    
+
+
+
+
+    <body>
+        <div class="top-box" id="top">
+            <br>
+            <h1 style="font-size:40px;">^-^Alex袁梓轩的默契大考验^-^</h1>
+            <div class="tops-box" >
+                <div class="btn-group"style="margin-left:260px;">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关于我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" href="../../index.html#introduce" ><h6>个人简介</h6></a>
+                        <a class="dropdown-item" href="../../index.html#photo" ><h6>个人相册</h6></a>
+                        <a class="dropdown-item" href="../../index.html#music" "><h6>最爱音乐</h6></a>
+                        <a class="dropdown-item" href="../../index.html#code" ><h6>编程作品</h6></a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实用干货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" href="../../index.html#help-zhan" id="daohang"><h6>实用网站</h6></a>
+                        <a class="dropdown-item" href="../../index.html#share-1" id="daohang"><h6>Tkinter-颜色</h6></a>
+                        
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pの|竹|工作室&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" href="../../index.html#about-zhu" id="daohang"><h6>关于の|竹|工作室</h6></a>
+                        <a class="dropdown-item" href="../../index.html#jiaru" id="daohang"><h6>加入の|竹|工作室</h6></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tops-box" id="top">
+                <div class="coding-big" style="width: 25%;">
+                    <p style="font-size:22px;">破风:</p><audio src="../../static/music/破风.wav" controls="controls"></audio>
+                </div>
+                <div class="coding-big" style="width: 25%;">
+                    <p style="font-size:22px;">无尽的冒险:</p><audio src="../../static/music/时代少年团-无尽的冒险.wav" controls="controls"></audio>
+                </div>
+                <div class="coding-big" style="width: 25%;">
+                    <p style="font-size:22px;">晴雅集:</p><audio src="../../static/music/晴雅集.wav" controls="controls"></audio>
+                </div>
+                
+                <div class="coding-big" style="width: 25%;">
+                    <p style="font-size:22px;">朱雀:</p><audio src="../../static/music/时代少年团-朱雀.wav" controls="controls"></audio>
+                </div>
+            </div>    
+                    <!--表单-->
+            <div class="bj" class="biggle" id="caidan">
+                <script src="../js/A_ques.js"></script>
+                <form name="fm" class="biggle" method="POST">
+                    <p>---------------------------------------------</p>
+                    <p style="color:rgb(50, 50, 50);padding:10px;text-align:center">1.以下选项全部大写</p>
+                    <p style="color:rgb(50, 50, 50);padding:10px;text-align:center">2.答对所有的题目，有彩蛋！！！</p>
+                    <p style="color:rgb(50, 50, 50);padding:10px;text-align:center">3.以下题均为客观题，即认为我会......</p>
+                    <p>---------------------------------------------</p>
+                    <p>1.在旅途中我更喜欢什么？</p>
+                    <p>A.到处拍照  B.用心感受</p>
+                    <input  name="one" class="zhuangshi-form">
+                    <p>---------------------------------------------</p>
+                    <p>2.一次奇妙的旅程我会选？</p>
+                    <p>A.太空漫步  B.回到小时候</p>
+                    <input  name="two" class="zhuangshi-form">
+                    <p>---------------------------------------------</p>
+                    <p>3.遇到不开心的事我会想？</p>
+                    <p>A.和他人诉说  B.自己默默想</p>
+                    <input  name="three" class="zhuangshi-form">
+                    <p>---------------------------------------------</p>
+                    <p>4.带一样东西穿越回1000年前，我会选？</p>
+                    <p>A.抗生素  B.奶茶配方</p>
+                    <input  name="four" class="zhuangshi-form">
+                    <p>---------------------------------------------</p>
+                    <p>5.我经常会晚睡吗？</p>
+                    <p>A.是  B.不是</p>
+                    <input  name="five" class="zhuangshi-form" >
+                    <p>---------------------------------------------</p>
+                    <p>6.更喜欢海滩还是高山？</p>
+                    <p>A.海滩  B.高山</p>
+                    <input  name="six" class="zhuangshi-form">
+                    <p>---------------------------------------------</p>
+                    <p>7.更向往和谁说不开心？</p>
+                    <p>A.家人  B.朋友</p>
+                    <input  name="seven" class="zhuangshi-form">
+                    <p>---------------------------------------------</p>
+                    <p>8.回消息快不快？</p>
+                    <p>A.快  B.不快</p>
+                    <input  name="eight" class="zhuangshi-form">
+                    <p>---------------------------------------------</p>
+                    <button onclick="is_Form()">提交</button>
+                    <p>---------------------------------------------</p>
+                    <br>
+                    </form>
+                </div>
+                <div class="top-box" id="top" style="float: inline-end;height: auto;">
+                    <a href="../../index.html">返回首页</a>
+                </div>    
+                
+            </div>
+        </div>
+    
+    </body>
+</html>

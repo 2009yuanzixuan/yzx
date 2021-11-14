@@ -1,0 +1,23 @@
+.zhuangshi-form{
+    border-color: rgba(250,250,255,0);
+    border-radius: 18px;
+    background-color: rgba(209,236,240,0.6);
+}
+.biggle{
+    
+    background-color: rgba(235,231,191,0.4);
+}
+.lit-big{
+    border-color: rgba(50,50,50,0.6);
+    border-style:dashed;
+    width: 100%;
+    height: auto;
+
+}
+    
+button{
+    border-color: rgba(250,250,255,0);
+    border-radius: 18px;
+    background-color: rgba(209,236,240,0.6);
+    width: 40%;
+}

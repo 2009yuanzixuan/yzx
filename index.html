@@ -1,0 +1,708 @@
+<!doctype html>
+
+<html>
+    <head>
+        <!--外部js文件导入，以及icon的搭建-->
+        <link rel="icon" href="icon/yzx.ico" >
+        <link rel="stylesheet"  href="templates/style/A_main.css">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--外部js文件导入，以及icon的搭建-->
+
+        <meta charset="utf-8"> 
+
+
+        <!--==============================================CSS部分=================================================-->
+        <style>
+            p{
+                font-size:20px;
+            }
+            
+            body{
+                background-image: url(static/images/bg.png);
+                text-align:center;
+            }
+            img{
+                width: 100%;
+            }
+            div{
+                text-align:center;                
+                background-color:rgba(255,255,255,0);   
+                font-family: stxingkai;
+                border: 2px solid;
+                border-color: rgba(250,250,255,0);
+                border-radius: 18px;
+                margin: 10px;
+                padding: 10px;
+            }
+            span{
+                border-radius: 18px;
+            }
+            a{
+                font-size: 30px;
+                font-family: stxingkai;
+                text-decoration:none;
+                width: auto;
+                height: auto;
+                color:rgba(50,120,255,0.8);
+            }
+            
+            h1{
+                color: rgba(50,50,50,0.6);
+                font-family: stxingkai;
+            }
+            .bu1{
+                color: rgba(198,250,2250,0.6);
+                font-family: stxingkai;
+            }
+            #percent{
+                width: 100%;
+                height:220px;
+            }
+            /*返回顶部按钮*/
+            #myBtn {
+                display: none; /* 默认隐藏 */
+                position: fixed; 
+                bottom: 20px; 
+                right: 30px; 
+                z-index: 99; 
+                border: none;
+                outline: none; 
+                background-color:rgba(250,250,250,0.5);/* 设置背景颜色，你可以设置自己想要的颜色或图片 */
+                cursor: pointer; 
+                padding: 15px; 
+                border-radius: 10px; /* 圆角 */
+            }
+            
+            #myBtn:hover {
+                background-color: #555; 
+            }
+            #xiaxiu{
+                background-color:rgba(228,243,246,0.6);  
+                border-radius: 10px;
+                border-color: rgba(250,250,255,0);
+            }
+            .hhh{
+                width:33%
+            }
+
+
+
+
+            #private{
+                position:fixed;
+                top: 71%;
+                right:0.5%;
+                z-index: 999;
+                width: 7.5%;
+                float:left;
+                display: block; /* 默认显示 */
+            }
+
+            /*返回顶部按钮*/
+        </style>
+        <!--=======================================CSS部分===========================================-->
+        <script src="templates/js/A_main.js"></script>
+
+
+    </head>
+    <body>
+        <!--=======================================JS部分===========================================-->
+        <script src="templates/js/B_main.js"></script>
+        <!--=======================================JS部分===========================-->
+
+        <!--                                                                        -->
+        <!--                                                                        -->
+        <!--                                                                        -->
+        <!--                                                                        -->
+        <!--                                                                        -->
+
+        <!--返回顶部按钮-->
+        <button onclick="topFunction()" id="myBtn" title="返回顶部" >
+            <img src="sign/arrow-up-circle.svg" style="width:40px;height:40px;" >
+        </button>
+        <!--返回顶部按钮-->
+
+
+
+        <!--                                                                        -->
+        <!--                                                                        -->
+
+
+
+
+        
+
+        <!--================================================头部导航和轮播=============================================================-->
+        <div class="top-box" id="top">
+            <br>
+            <h1 style="font-size:40px;">^-^Alex袁梓轩的主页^-^</h1>
+            <div class="tops-box">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关于我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" href="#introduce" ><h6>个人简介</h6></a>
+                        <a class="dropdown-item" href="#photo" ><h6>个人相册</h6></a>
+                        <a class="dropdown-item" href="#music" "><h6>最爱音乐</h6></a>
+                        <a class="dropdown-item" href="#code" ><h6>编程作品</h6></a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实用干货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" href="#help-zhan" id="daohang"><h6>实用网站</h6></a>
+                        <a class="dropdown-item" href="#share-1" id="daohang"><h6>Tkinter-颜色</h6></a>
+                        
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pの|竹|工作室&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" href="#about-zhu" id="daohang"><h6>关于の|竹|工作室</h6></a>
+                        <a class="dropdown-item" href="#jiaru" id="daohang"><h6>加入の|竹|工作室</h6></a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" onclick="cg()" id="daohang"><h6>素描主题</h6></a>
+                        <a class="dropdown-item" onclick="cb()" id="daohang"><h6>蓝色主题</h6></a>
+                        <a class="dropdown-item" onclick="cp()" id="daohang"><h6>粉色主题</h6></a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" href='templates/ques.html' id="daohang"><h6>默契大考验</h6></a>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!--默契大考验入口-->
+            <a href="templates/html/ques.html"><img  id= "private" src='static/images/默契.gif'></a>
+
+
+
+
+
+            <!--轮播作品...................................................................................................-->
+            <div id="demo" class="carousel slide" data-ride="carousel">
+ 
+              <!-- 指示符 -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                    <li data-target="#demo" data-slide-to="5"></li>
+                </ul>
+             
+                <!-- 轮播图片 -->
+                <div class="carousel-inner" id="code">
+                    <div class="carousel-item active">
+                        <img src="codeepic/P1.png" id="percent" id="f-w">
+                        <div class="carousel-caption">
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=14205468&version=offline&form=python&langType=python" target="_blank">牛年作品①:2021红包冲突</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=14805342&version=offline&form=python&langType=python" target="_blank">&nbsp;②:2021年兽跑酷</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=14805342&version=offline&form=python&langType=python" target="_blank">&nbsp;③:★2021除鼠迎牛</a>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="codeepic/P6.png" id="percent" id="f-w">
+                        <div class="carousel-caption">
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=18001987&version=offline&form=python&langType=python" target="_blank">工具①:原码破解</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=16200903&version=offline&form=python&langType=python" target="_blank">&nbsp;②:天气查询</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=21230530&version=offline&form=python&langType=python" target="_blank">&nbsp;③:★像素化图片</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="codeepic/P3.png" id="percent" id="f-w">
+                        <div class="carousel-caption">
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=18579850&version=offline&form=python&langType=python" target="_blank">手速系列①:单击</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=19269996&version=offline&form=python&langType=python" target="_blank">&nbsp;②:双击</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="codeepic/P4.png" id="percent" id="f-w">
+                        <div class="carousel-caption">
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15960959&version=offline&form=python&langType=python" target="_blank">模仿系列①:★色彩游戏</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=21230078&version=offline&form=python&langType=python" target="_blank">&nbsp;②:★作业之下</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="codeepic/P2.png" id="percent" id="f-w">
+                        <div class="carousel-caption">
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15623093&version=offline&form=python&langType=python" target="_blank">元宵作品①:圆吃圆</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15665151&version=offline&form=python&langType=python" target="_blank">&nbsp;②:★猜灯谜</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="codeepic/P5.png" id="percent">
+                        <div class="carousel-caption" id="f-w">
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15805934&version=webpy&form=webpy&langType=webpy" target="_blank">海龟作品①:方块大战</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15807712&version=webpy&form=webpy&langType=webpy" target="_blank">&nbsp;②:无线圆圈</a>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15804919&version=webpy&form=webpy&langType=webpy" target="_blank">&nbsp;③:荷塘月色</a>
+                        </div>
+                    </div>
+                    <div class="carousel-caption">
+                        caption：★代表上过首页
+                    </div>
+                </div>
+             
+                <!-- 左右切换按钮 -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            <!--.................................................................................................................-->
+        </div>
+        <!--=========================================头部导航和轮播=====================================================-->    
+
+
+
+
+
+
+
+
+
+
+        <!--==========================================================大框========================================================-->
+        <div class="big">
+            <!--==========================================================左框=====================================================-->
+            <div class="left">
+                <!--===========================================================介绍=================================================-->
+                <div class="intro" id="introduce">
+                    <p><img src="static/images/user.png" style="width:30%"></p>
+                    <h1>^-^不秃头的程序员^-^</h1>
+                    <p>姓名：袁梓轩</p>
+                    <p>民族：汉</p>
+                    <p>年龄：100岁</p>
+                    <p>生日：2009.10.07</p>
+                    <p>爱好: 编程</p>
+                    <p>技能：Python、Html、CSS、C++</p>
+                    <p>个性签名：^~^我是一片不知疲倦的树林，不停制造着‘’程序氧气”！^~^ 。</p>
+                </div>
+
+
+
+
+                <!--===========================================================音乐=================================================-->
+
+
+
+
+                <div class="mus" id="music">
+                    <h1 >最爱音乐</h1>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">记念:</p><audio src="static/music/记念.wav" controls="controls"></audio>
+                    </div>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">起风了:</p><audio src="static/music/起风了.wav" controls="controls"></audio>
+                    </div>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">半生雪:</p><audio src="static/music/半生雪.wav" controls="controls"></audio>
+                    </div>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">飘向北方:</p><audio src="static/music/飘向北方.wav" controls="controls"></audio>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!--===========================================================实用网站=================================================-->
+
+
+
+
+
+
+
+                <div class="mus">
+                    <h1 id="help-zhan">实用网站</h1>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">菜鸟教程：编程技术问题一站搞定</p><a href="https://www.runoob.com/" target="_blank">https://www.runoob.com/</a>
+                    </div>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">搞定设计：作图它都能搞定(缺点是有水印)</p><a href="https://www.gaoding.com/" target="_blank">https://www.gaoding.com/</a>
+                    </div>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">魔方小站：各种魔方教程</p><a href="http://www.rubik.com.cn/" target="_blank">http://www.rubik.com.cn/</a>
+                    </div>
+                    <div class="coding-big">
+                        <p style="font-size:22px;">Github：网站搭建工具</p><a href="https://github.com/"  target="_blank">https://github.com/</a>
+                    </div>
+                </div>
+                <div class="photog">
+                    <h1 id="photo">个人相册</h1>
+                    <div>
+                        <div class="card" id="xiaxiu">
+                            <img src="static/images/shu.jpg">
+                            <p style="font-family:kaiti;">TCTY3级满分通过</p>
+                        </div>
+                        <div class="card" id="xiaxiu">
+                            <img src="static/images/shu2.png">
+                            <p style="font-family:kaiti;">Python1级通过</p>
+                        </div>
+                        <div class="card" id="xiaxiu">
+                            <img src="static/images/shu3.png">
+                            <p style="font-family:kaiti;">C++一级通过</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            
+
+
+        
+
+
+            <!--=======================================================右框============================================================-->
+            <div class="right">
+               
+
+
+
+
+
+                <div class="share-1">
+                    <h1 id="share-1" >Tkinter-颜色</h1>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);height:35px;font-family:stxingkai;"><h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp|查看|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</h5></button>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2" style="font-family:kaiti; text-align:left;">
+                                <span style="background-color: #FFB6C1;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFB6C1 LightPink 浅粉红<br>
+                                <span style="background-color: #FFC0CB;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFC0CB Pink 粉红<br>
+                                <span style="background-color: #DC143C;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DC143C Crimson 深红/猩红<br>
+                                <span style="background-color: #FFF0F5;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFF0F5 LavenderBlush 淡紫红<br>
+                                <span style="background-color: #DB7093;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DB7093 PaleVioletRed 弱紫罗兰红<br>
+                                <span style="background-color: #FF69B4;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF69B4 HotPink 热情的粉红<br>
+                                <span style="background-color: #FF1493;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF1493 DeepPink 深粉红<br>
+                                <span style="background-color: #C71585;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#C71585 MediumVioletRed 中紫罗兰红<br>
+                                <span style="background-color: #DA70D6;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DA70D6 Orchid 暗紫色/兰花紫<br>
+                                <span style="background-color: #D8BFD8;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#D8BFD8 Thistle 蓟色<br>
+                                <span style="background-color: #DDA0DD;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DDA0DD Plum 洋李色/李子紫<br>
+                                <span style="background-color: #EE82EE;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#EE82EE Violet 紫罗兰<br>
+                                <span style="background-color: Magenta;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF00FF Magenta 洋红/玫瑰红<br>
+                                <span style="background-color: Fuchsia;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF00FF Fuchsia 紫红/灯笼海棠<br>
+                                <span style="background-color: #8B008B;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#8B008B DarkMagenta 深洋红<br>
+                                <span style="background-color: #800080;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#800080 Purple 紫色<br>
+                                <span style="background-color: #BA55D3;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#BA55D3 MediumOrchid 中兰花紫<br>
+                                <span style="background-color: #9400D3;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#9400D3 DarkViolet 暗紫罗兰<br>
+                                <span style="background-color: #9932CC;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#9932CC DarkOrchid 暗兰花紫<br>
+                                <span style="background-color: #4B0082;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#4B0082 Indigo 靛青/紫兰色<br>
+                                <span style="background-color: #8A2BE2;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#8A2BE2 BlueViolet 蓝紫罗兰<br>
+                                <span style="background-color: #9370DB;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#9370DB MediumPurple 中紫色<br>
+                                <span style="background-color: #7B68EE;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#7B68EE MediumSlateBlue 中暗蓝色/中板岩蓝<br>
+                                <span style="background-color: #6A5ACD;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#6A5ACD SlateBlue 石蓝色/板岩蓝<br>
+                                <span style="background-color: #483D8B;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#483D8B DarkSlateBlue 暗灰蓝色/暗板岩蓝<br>
+                                <span style="background-color: #E6E6FA;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#E6E6FA Lavender 淡紫色/熏衣草淡紫<br>
+                                <span style="background-color: #F8F8FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F8F8FF GhostWhite 幽灵白<br>
+                                <span style="background-color: #0000FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#0000FF Blue 纯蓝<br>
+                                <span style="background-color: #0000CD;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#0000CD MediumBlue 中蓝色<br>
+                                <span style="background-color: #191970;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#191970 MidnightBlue 午夜蓝<br>
+                                <span style="background-color: #00008B;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00008B DarkBlue 暗蓝色<br>
+                                <span style="background-color: #000080;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#000080 Navy 海军蓝<br>
+                                <span style="background-color: #4169E1;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#4169E1 RoyalBlue 皇家蓝/宝蓝<br>
+                                <span style="background-color: #6495ED;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#6495ED CornflowerBlue 矢车菊蓝<br>
+                                <span style="background-color: #B0C4DE;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#B0C4DE LightSteelBlue 亮钢蓝<br>
+                                <span style="background-color: #778899;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#778899 LightSlateGray 亮蓝灰/亮石板灰<br>
+                                <span style="background-color: #708090;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#708090 SlateGray 灰石色/石板灰<br>
+                                <span style="background-color: #1E90FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#1E90FF DodgerBlue 闪兰色/道奇蓝<br>
+                                <span style="background-color: #F0F8FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F0F8FF AliceBlue 爱丽丝蓝<br>
+                                <span style="background-color: #4682B4;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#4682B4 SteelBlue 钢蓝/铁青<br>
+                                <span style="background-color: #87CEFA;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#87CEFA LightSkyBlue 亮天蓝色<br>
+                                <span style="background-color: #87CEEB;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#87CEEB SkyBlue 天蓝色<br>
+                                <span style="background-color: #00BFFF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00BFFF DeepSkyBlue 深天蓝<br>
+                                <span style="background-color: #ADD8E6;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#ADD8E6 LightBlue 亮蓝<br>
+                                <span style="background-color: #B0E0E6;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#B0E0E6 PowderBlue 粉蓝色/火药青<br>
+                                <span style="background-color: #5F9EA0;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#5F9EA0 CadetBlue 军兰色/军服蓝<br>
+                                <span style="background-color: #F0FFFF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F0FFFF Azure 蔚蓝色<br>
+                                <span style="background-color: #E0FFFF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#E0FFFF LightCyan 淡青色<br>
+                                <span style="background-color: #AFEEEE;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#AFEEEE PaleTurquoise 弱绿宝石<br>
+                                <span style="background-color: Cyan;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00FFFF Cyan 青色<br>
+                                <span style="background-color: Aqua;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00FFFF Aqua 浅绿色/水色<br>
+                                <span style="background-color: #00CED1;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00CED1 DarkTurquoise 暗绿宝石<br>
+                                <span style="background-color: #2F4F4F;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#2F4F4F DarkSlateGray 暗瓦灰色/暗石板灰<br>
+                                <span style="background-color: #008B8B;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#008B8B DarkCyan 暗青色<br>
+                                <span style="background-color: #008080;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#008080 Teal 水鸭色<br>
+                                <span style="background-color: #48D1CC;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#48D1CC MediumTurquoise 中绿宝石<br>
+                                <span style="background-color: #20B2AA;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#20B2AA LightSeaGreen 浅海洋绿<br>
+                                <span style="background-color: #40E0D0;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#40E0D0 Turquoise 绿宝石<br>
+                                <span style="background-color: #7FFFD4;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#7FFFD4 Aquamarine 宝石碧绿<br>
+                                <span style="background-color: #66CDAA;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#66CDAA MediumAquamarine 中宝石碧绿<br>
+                                <span style="background-color: #00FA9A;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00FA9A MediumSpringGreen 中春绿色<br>
+                                <span style="background-color: #FFB6C1;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFB6C1 LightPink 浅粉红<br>
+                                <span style="background-color: #FFC0CB;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFC0CB Pink 粉红<br>
+                                <span style="background-color: #DC143C;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DC143C Crimson 深红/猩红<br>
+                                <span style="background-color: #FFF0F5;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFF0F5 LavenderBlush 淡紫红<br>
+                                <span style="background-color: #DB7093;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DB7093 PaleVioletRed 弱紫罗兰红<br>
+                                <span style="background-color: #FF69B4;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF69B4 HotPink 热情的粉红<br>
+                                <span style="background-color: #FF1493;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF1493 DeepPink 深粉红<br>
+                                <span style="background-color: #C71585;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#C71585 MediumVioletRed 中紫罗兰红<br>
+                                <span style="background-color: #DA70D6;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DA70D6 Orchid 暗紫色/兰花紫<br>
+                                <span style="background-color: #D8BFD8;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#D8BFD8 Thistle 蓟色<br>
+                                <span style="background-color: #DDA0DD;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DDA0DD Plum 洋李色/李子紫<br>
+                                <span style="background-color: #EE82EE;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#EE82EE Violet 紫罗兰<br>
+                                <span style="background-color: Magenta;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF00FF Magenta 洋红/玫瑰红<br>
+                                <span style="background-color: Fuchsia;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF00FF Fuchsia 紫红/灯笼海棠<br>
+                                <span style="background-color: #8B008B;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#8B008B DarkMagenta 深洋红<br>
+                                <span style="background-color: #800080;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#800080 Purple 紫色<br>
+                                <span style="background-color: #BA55D3;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#BA55D3 MediumOrchid 中兰花紫<br>
+                                <span style="background-color: #9400D3;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#9400D3 DarkViolet 暗紫罗兰<br>
+                                <span style="background-color: #9932CC;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#9932CC DarkOrchid 暗兰花紫<br>
+                                <span style="background-color: #4B0082;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#4B0082 Indigo 靛青/紫兰色<br>
+                                <span style="background-color: #8A2BE2;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#8A2BE2 BlueViolet 蓝紫罗兰<br>
+                                <span style="background-color: #9370DB;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#9370DB MediumPurple 中紫色<br>
+                                <span style="background-color: #7B68EE;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#7B68EE MediumSlateBlue 中暗蓝色/中板岩蓝<br>
+                                <span style="background-color: #6A5ACD;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#6A5ACD SlateBlue 石蓝色/板岩蓝<br>
+                                <span style="background-color: #483D8B;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#483D8B DarkSlateBlue 暗灰蓝色/暗板岩蓝<br>
+                                <span style="background-color: #E6E6FA;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#E6E6FA Lavender 淡紫色/熏衣草淡紫<br>
+                                <span style="background-color: #F8F8FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F8F8FF GhostWhite 幽灵白<br>
+                                <span style="background-color: #0000FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#0000FF Blue 纯蓝<br>
+                                <span style="background-color: #0000CD;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#0000CD MediumBlue 中蓝色<br>    
+                            </div><!--nadou-->
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2"style="font-family:kaiti; text-align:left;">
+                                <span style="background-color: #191970;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#191970 MidnightBlue 午夜蓝<br>
+                                <span style="background-color: #00008B;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00008B DarkBlue 暗蓝色<br>
+                                <span style="background-color: #000080;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#000080 Navy 海军蓝<br>
+                                <span style="background-color: #4169E1;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#4169E1 RoyalBlue 皇家蓝/宝蓝<br>
+                                <span style="background-color: #6495ED;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#6495ED CornflowerBlue 矢车菊蓝<br>
+                                <span style="background-color: #B0C4DE;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#B0C4DE LightSteelBlue 亮钢蓝<br>
+                                <span style="background-color: #778899;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#778899 LightSlateGray 亮蓝灰/亮石板灰<br>
+                                <span style="background-color: #708090;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#708090 SlateGray 灰石色/石板灰<br>
+                                <span style="background-color: #1E90FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#1E90FF DodgerBlue 闪兰色/道奇蓝<br>
+                                <span style="background-color: #F0F8FF;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F0F8FF AliceBlue 爱丽丝蓝<br>
+                                <span style="background-color: #F5FFFA;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F5FFFA MintCream 薄荷奶油<br>
+                                <span style="background-color: #00FF7F;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00FF7F SpringGreen 春绿色<br>
+                                <span style="background-color: #3CB371;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#3CB371 MediumSeaGreen 中海洋绿<br>
+                                <span style="background-color: #2E8B57;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#2E8B57 SeaGreen 海洋绿<br>
+                                <span style="background-color: #F0FFF0;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F0FFF0 Honeydew 蜜色/蜜瓜色<br>
+                                <span style="background-color: #90EE90;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#90EE90 LightGreen 淡绿色<br>
+                                <span style="background-color: #98FB98;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#98FB98 PaleGreen 弱绿色<br>
+                                <span style="background-color: #8FBC8F;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#8FBC8F DarkSeaGreen 暗海洋绿<br>
+                                <span style="background-color: #32CD32;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#32CD32 LimeGreen 闪光深绿<br>
+                                <span style="background-color: #00FF00 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#00FF00 Lime 闪光绿<br>
+                                <span style="background-color: #228B22 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#228B22 ForestGreen 森林绿<br>
+                                <span style="background-color: #008000 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#008000 Green 纯绿<br>
+                                <span style="background-color: #006400 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#006400 DarkGreen 暗绿色<br>
+                                <span style="background-color: #7FFF00 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#7FFF00 Chartreuse 黄绿色/查特酒绿<br>
+                                <span style="background-color: #7CFC00 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#7CFC00 LawnGreen 草绿色/草坪绿<br>
+                                <span style="background-color: #ADFF2F ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#ADFF2F GreenYellow 绿黄色<br>
+                                <span style="background-color: #556B2F ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#556B2F DarkOliveGreen 暗橄榄绿<br>
+                                <span style="background-color: #9ACD32 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#9ACD32 YellowGreen 黄绿色<br>
+                                <span style="background-color: #6B8E23 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#6B8E23 OliveDrab 橄榄褐色<br>
+                                <span style="background-color: #F5F5DC ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F5F5DC Beige 米色/灰棕色<br>
+                                <span style="background-color: #FAFAD2 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FAFAD2 LightGoldenrodYellow 亮菊黄<br>
+                                <span style="background-color: #FFFFF0 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFFFF0 Ivory 象牙色<br>
+                                <span style="background-color: #FFFFE0 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFFFE0 LightYellow 浅黄色<br>
+                                <span style="background-color: #FFFF00 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFFF00 Yellow 纯黄<br>
+                                <span style="background-color: #808000 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#808000 Olive 橄榄<br>
+                                <span style="background-color: #BDB76B ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#BDB76B DarkKhaki 暗黄褐色/深卡叽布<br>
+                                <span style="background-color: #FFFACD ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFFACD LemonChiffon 柠檬绸<br>
+                                <span style="background-color: #EEE8AA ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#EEE8AA PaleGoldenrod 灰菊黄/苍麒麟色<br>
+                                <span style="background-color: #F0E68C ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F0E68C Khaki 黄褐色/卡叽布<br>
+                                <span style="background-color: #FFD700 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFD700 Gold 金色<br>
+                                <span style="background-color: #FFF8DC ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFF8DC Cornsilk 玉米丝色<br>
+                                <span style="background-color: #DAA520 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DAA520 Goldenrod 金菊黄<br>
+                                <span style="background-color: #B8860B ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#B8860B DarkGoldenrod 暗金菊黄<br>
+                                <span style="background-color: #FFFAF0 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFFAF0 FloralWhite 花的白色<br>
+                                <span style="background-color: #FDF5E6 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FDF5E6 OldLace 老花色/旧蕾丝<br>
+                                <span style="background-color: #F5DEB3 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F5DEB3 Wheat 浅黄色/小麦色<br>
+                                <span style="background-color: #FFE4B5 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFE4B5 Moccasin 鹿皮色/鹿皮靴<br>
+                                <span style="background-color: #FFA500 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFA500 Orange 橙色<br>
+                                <span style="background-color: #FFEFD5 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFEFD5 PapayaWhip 番木色/番木瓜<br>
+                                <span style="background-color: #FFEBCD ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFEBCD BlanchedAlmond 白杏色<br>
+                                <span style="background-color: #FFDEAD ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFDEAD NavajoWhite 纳瓦白/土著白<br>
+                                <span style="background-color: #FAEBD7 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FAEBD7 AntiqueWhite 古董白<br>
+                                <span style="background-color: #D2B48C ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#D2B48C Tan 茶色<br>
+                                <span style="background-color: #DEB887 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DEB887 BurlyWood 硬木色<br>
+                                <span style="background-color: #FFE4C4 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFE4C4 Bisque 陶坯黄<br>
+                                <span style="background-color: #FF8C00 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF8C00 DarkOrange 深橙色<br>
+                                <span style="background-color: #FAF0E6 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FAF0E6 Linen 亚麻布<br>
+                                <span style="background-color: #CD853F ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#CD853F Peru 秘鲁色<br>
+                                <span style="background-color: #FFDAB9 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFDAB9 PeachPuff 桃肉色<br>
+                                <span style="background-color: #F4A460 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F4A460 SandyBrown 沙棕色<br>
+                                <span style="background-color: #D2691E ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#D2691E Chocolate 巧克力色<br>
+                                <span style="background-color: #8B4513 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#8B4513 SaddleBrown 重褐色/马鞍棕色<br>
+                                <span style="background-color: #FFF5EE ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFF5EE Seashell 海贝壳<br>
+                                <span style="background-color: #A0522D ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#A0522D Sienna 黄土赭色<br>
+                                <span style="background-color: #FFA07A ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFA07A LightSalmon 浅鲑鱼肉色<br>
+                                <span style="background-color: #FF7F50 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF7F50 Coral 珊瑚<br>
+                                <span style="background-color: #FF4500 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF4500 OrangeRed 橙红色<br>
+                                <span style="background-color: #E9967A ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#E9967A DarkSalmon 深鲜肉/鲑鱼色<br>
+                                <span style="background-color: #FF6347 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF6347 Tomato 番茄红<br>
+                                <span style="background-color: #FFE4E1 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFE4E1 MistyRose 浅玫瑰色/薄雾玫瑰<br>
+                                <span style="background-color: #FA8072 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FA8072 Salmon 鲜肉/鲑鱼色<br>
+                                <span style="background-color: #FFFAFA ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFFAFA Snow 雪白色<br>
+                                <span style="background-color: #F08080 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F08080 LightCoral 淡珊瑚色<br>
+                                <span style="background-color: #BC8F8F ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#BC8F8F RosyBrown 玫瑰棕色<br>
+                                <span style="background-color: #CD5C5C ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#CD5C5C IndianRed 印度红<br>
+                                <span style="background-color: #FF0000 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FF0000 Red 纯红<br>
+                                <span style="background-color: #A52A2A ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#A52A2A Brown 棕色<br>
+                                <span style="background-color: #B22222 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#B22222 FireBrick 火砖色/耐火砖<br>
+                                <span style="background-color: #8B0000 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#8B0000 DarkRed 深红色<br>
+                                <span style="background-color: #800000 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#800000 Maroon 栗色<br>
+                                <span style="background-color: #FFFFFF ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#FFFFFF White 纯白<br>
+                                <span style="background-color: #F5F5F5 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#F5F5F5 WhiteSmoke 白烟<br>
+                                <span style="background-color: #DCDCDC ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#DCDCDC Gainsboro 淡灰色<br>
+                                <span style="background-color: #D3D3D3 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#D3D3D3 LightGrey 浅灰色<br>
+                                <span style="background-color: #C0C0C0 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#C0C0C0 Silver 银灰色<br>
+                                <span style="background-color: #A9A9A9 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#A9A9A9 DarkGray 深灰色<br>
+                                <span style="background-color: #808080 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#808080 Gray 灰色<br>
+                                <span style="background-color: #696969 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#696969 DimGray 暗淡灰<br>
+                                <span style="background-color: #000000 ;width: 5px;height: 5px; ">&nbsp;&nbsp;</span>#000000 Black 纯黑'''<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+
+
+
+                <div class="a">
+                
+                    <p><h1 id="program">编程作品</h1></p>
+                    
+                    <div class="tlt">
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=14205468&version=offline&form=python&langType=python" target="_blank">红包冲突</a></p>
+                                <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=14205468&version=offline&form=python&langType=python" target="_blank">
+                                    <img src="codeepic/url_1.png" class="hhh">
+                                </a>
+                        </div>
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15623093&version=offline&form=python&langType=python" target="_blank">2021圆吃圆1.5.1</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15623093&version=offline&form=python&langType=python" target="_blank">
+                                <img src="codeepic/url_2.png" class="hhh">
+                             </a>
+                        </div>
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15805934&version=webpy&form=webpy&langType=webpy" target="_blank">方块大战</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15805934&version=webpy&form=webpy&langType=webpy" target="_blank">
+                                <img src="codeepic/url_3.png" class="hhh">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tlt">
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15960959&version=offline&form=python&langType=python" target="_blank">V~色彩1.01游戏~V</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=15960959&version=offline&form=python&langType=python" target="_blank">
+                                <img src="codeepic/url_4.png" class="hhh">
+                            </a>
+                        </div>
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=18579850&version=offline&form=python&langType=python" target="_blank">~手速鼠标单击~</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=18579850&version=offline&form=python&langType=python" target="_blank">
+                                <img src="codeepic/url_5.png" class="hhh">
+                            </a>
+                        </div>
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=19269996&version=offline&form=python&langType=python" target="_blank">~手速鼠标双击~</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=19269996&version=offline&form=python&langType=python" target="_blank">
+                                <img src="codeepic/url_6.png" class="hhh">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tlt">
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=19269996&version=offline&form=python&langType=python" target="_blank">yzx{像素化头像(正方形)}2.0</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=19269996&version=offline&form=python&langType=python" target="_blank">
+                                <img src="codeepic/url_7.png" class="hhh">
+                            </a>
+                        </div>
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=21230078&version=offline&form=python&langType=python" target="_blank">{yzx}作业之下UnderThe Homework</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=21230078&version=offline&form=python&langType=python" target="_blank">
+                                <img src="codeepic/url_8.png" class="hhh">
+                            </a>
+                        </div>
+                        <div class="coding-big">
+                            <p><a href="https://code.xueersi.com/home/project/detail?lang=code&pid=18001987&version=offline&form=python&langType=python" target="_blank">𝔂𝔃𝔁{源码破解器}</a></p>
+                            <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=18001987&version=offline&form=python&langType=python" target="_blank">
+                                <img src="codeepic/url_9.png" class="hhh">
+                            </a>
+                        </div>
+                    </div>
+                        
+                </div>
+                
+
+
+                <div class="share-1">
+                    <p><h1 id="about-zhu">关于の|竹|工作室</h1></p>
+                    <div class="coding-big">
+                        <h5>一.关于LOGO</h5>
+                        <img src="icon/の竹.png " style="width:200px;height:200px;">
+                    </div>
+                    <div class="coding-big">
+                        <h5>二.关于名称</h5>
+                        <pre style="font-family: stxingkai;"><h5>
+1.竹是花中四君子,代表工作室每个人顽强的品质。
+2.谐音'逐'---追逐,工作室的每一个成员都要追逐的己的梦想。
+3.竹字头是一个部首,表明'竹'字当头。
+4.竹子是喜阳的,我希望每一个成员都能积极向上
+                        </h5></pre>
+                    </div>
+                    <div class="coding-big">
+                        <h5>三.一些规定</h5>
+                        <pre style="font-family: stxingkai;"><h5>
+1.工作室的每个人要做到作品质量高。
+2.工作室室长经推选决定。
+3.在这里每个人都可以发表自己的见解与想法
+  若有好想法却实现不了的，可以让大家一起帮忙。
+4.宁愿不发作品，也不水作。
+                        </h5></pre>
+                    </div>
+                </div>
+
+                <div class="share-1">
+                    <p><h1 id="jiaru">加入の|竹|工作室</h1></p>
+                    <div class="coding-big">
+                        <pre style="font-family:kaiti;"><h5>
+若要加入我们，请在我的作品下方留言，我在C站的名称是'袁梓轩'
+        或者加我的微信------微信号为：yzx_6723
+                        </h5></pre>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </body>
+</html>
